@@ -1,6 +1,8 @@
-#include <iostream>
-using std::cout;
-using std::endl;
+// #include <iostream>
+// using std::cout;
+// using std::endl;
+
+// Day 2 , we are going to implement Interfaces
 
 #include <string>
 using std::string;
@@ -9,26 +11,13 @@ class GradeBook
 {
 
 public:
-    GradeBook(string name)
-    {
-        setCourseName(name);
-    }
+    GradeBook(string);
 
-    void setCourseName(string name)
-    {
-        courseName = name;
-    }
+    void setCourseName(string);
 
-    string getCourseName()
-    {
-        return courseName;
-    }
+    string getCourseName();
 
-    void displayMessage()
-    {
-        cout << "Welcome to the grade book for\n"
-             << getCourseName() << "!" << endl;
-    }
+    void displayMessage();
 
 private:
     string courseName;

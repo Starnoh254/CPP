@@ -4,11 +4,18 @@ using std::endl;
 
 #include "GradeBook.h"
 
-int main()
-{
-    GradeBook gradeBook1("CS101 Introduction to C++ Programming");
-    GradeBook gradeBook2("CS102 Data Structures in C++");
+GradeBook::GradeBook( string name ){
+    setCourseName( name );
+}
 
-    cout << "gradeBook1 created for course: " << gradeBook1.getCourseName() << "\ngradeBook2 created for course: " << gradeBook2.getCourseName() << endl;
-    return 0;
+void GradeBook::setCourseName( string name ){
+    courseName = name;
+}
+
+string GradeBook::getCourseName(){
+    return courseName;
+}
+
+void GradeBook::displayMessage() {
+    cout << "Welcome to the grade book for\n" << getCourseName() << "!" << endl;
 }
